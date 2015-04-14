@@ -58,7 +58,7 @@ public class TuVeuxQuoiService {
         sites = null;
         sites = search.doSearch(searchParam.toString(), 20);
 
-        System.out.println("**********************************************************");
+        System.out.println("*********************************************************");
         for (Site site : sites) {
             System.out.println(site.getUrl());
             for (String page : site.getPagesList()) {
