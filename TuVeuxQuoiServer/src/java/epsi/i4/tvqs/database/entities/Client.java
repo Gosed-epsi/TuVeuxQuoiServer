@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package epsi.i4.tvqs.database.bean;
+package epsi.i4.tvqs.database.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

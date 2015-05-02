@@ -12,8 +12,14 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Edgar/Documents/NetBeansProjects/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/search/bean/Search.java</file>
-            <file>file:/C:/Users/Edgar/Documents/NetBeansProjects/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/service/TuVeuxQuoiService.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/interfaces/DatabaseManager.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/entities/Client.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/entities/Resultat.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/implement/ResultatImpl.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/implement/ClientImpl.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/implement/RechercheImpl.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/database/entities/Recherche.java</file>
+            <file>file:/D:/GitRepository/TuVeuxQuoiServer/src/java/epsi/i4/tvqs/service/TuVeuxQuoiService.java</file>
         </group>
     </open-files>
 </project-private>

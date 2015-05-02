@@ -5,6 +5,10 @@
  */
 package epsi.i4.tvqs.service;
 
+import epsi.i4.tvqs.database.entities.Client;
+import epsi.i4.tvqs.database.implement.ClientImpl;
+import epsi.i4.tvqs.database.implement.RechercheImpl;
+import epsi.i4.tvqs.database.implement.ResultatImpl;
 import epsi.i4.tvqs.search.bean.Scraping;
 import epsi.i4.tvqs.search.bean.Search;
 import epsi.i4.tvqs.search.bean.Site;
@@ -31,6 +35,10 @@ public class TuVeuxQuoiService {
     @PersistenceContext(unitName = "TuVeuxQuoiServerPU")
     protected EntityManager em;
 
+    private ClientImpl clientImpl;
+    private RechercheImpl rechercheImpl;
+    private ResultatImpl ResultatImpl;
+
     /**
      *
      */
@@ -45,6 +53,10 @@ public class TuVeuxQuoiService {
      *
      */
     protected List<Site> sites;
+
+    public Client creationCompteClient(Client cl) {
+        return (Client) clientImpl.addElement(cl);
+    }
 
     /**
      * Web service operation
