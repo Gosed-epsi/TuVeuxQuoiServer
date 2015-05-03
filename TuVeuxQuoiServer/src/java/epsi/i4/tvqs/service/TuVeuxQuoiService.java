@@ -54,8 +54,39 @@ public class TuVeuxQuoiService {
      */
     protected List<Site> sites;
 
+    /**
+     *
+     * @param cl : nouveau client
+     * @return client enregistré
+     */
     public Client creationCompteClient(Client cl) {
         return (Client) clientImpl.addElement(cl);
+    }
+
+    /**
+     *
+     * @param cl : modification des informations client
+     * @return client modifié
+     */
+    public Client modificationCompteClient(Client cl) {
+        return (Client) clientImpl.modifyElement(cl);
+    }
+
+    /**
+     *
+     * @param cl : client à supprimer
+     */
+    public void suppressionCompteClient(Client cl) {
+        clientImpl.deleteElement(cl);
+    }
+
+    /**
+     *
+     * @param cl : objet client avec mail et password
+     * @return true si trouvé | false si non présent en base
+     */
+    public boolean connection(Client cl) {
+        return clientImpl.connection(cl);
     }
 
     /**
