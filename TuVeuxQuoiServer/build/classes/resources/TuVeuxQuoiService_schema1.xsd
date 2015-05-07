@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://service.tvqs.i4.epsi/" xmlns:tns="http://service.tvqs.i4.epsi/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="client" type="tns:client"/>
+
+  <xs:element name="connection" type="tns:connection"/>
+
+  <xs:element name="connectionResponse" type="tns:connectionResponse"/>
+
+  <xs:element name="creationCompteClient" type="tns:creationCompteClient"/>
+
+  <xs:element name="creationCompteClientResponse" type="tns:creationCompteClientResponse"/>
+
+  <xs:element name="getMailList" type="tns:getMailList"/>
+
+  <xs:element name="getMailListResponse" type="tns:getMailListResponse"/>
+
+  <xs:element name="modificationCompteClient" type="tns:modificationCompteClient"/>
+
+  <xs:element name="modificationCompteClientResponse" type="tns:modificationCompteClientResponse"/>
+
+  <xs:element name="suppressionCompteClient" type="tns:suppressionCompteClient"/>
+
+  <xs:element name="suppressionCompteClientResponse" type="tns:suppressionCompteClientResponse"/>
+
+  <xs:element name="verifierMail" type="tns:verifierMail"/>
+
+  <xs:element name="verifierMailResponse" type="tns:verifierMailResponse"/>
+
+  <xs:complexType name="suppressionCompteClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="client">
+    <xs:sequence>
+      <xs:element name="idclient" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="mailclient" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomclient" type="xs:string" minOccurs="0"/>
+      <xs:element name="passwordclient" type="xs:string" minOccurs="0"/>
+      <xs:element name="prenomclient" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="suppressionCompteClientResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="verifierMail">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="verifierMailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="creationCompteClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="creationCompteClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="connection">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="connectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMailList">
+    <xs:sequence>
+      <xs:element name="searchParam" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMailListResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="modificationCompteClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="modificationCompteClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

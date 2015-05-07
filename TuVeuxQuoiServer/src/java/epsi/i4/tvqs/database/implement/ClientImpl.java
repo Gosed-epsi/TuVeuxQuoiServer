@@ -48,11 +48,22 @@ public abstract class ClientImpl implements DatabaseManager {
         em.remove(obj);
     }
 
-    public boolean connection(Client cl) {
+    public Client connection(Client cl) {
         Query query = em.createNamedQuery("Client.findByMailclient");
         query.setParameter("mailclient", cl.getMailclient());
         List<Client> clientTrouve = query.getResultList();
-        return cl.getPasswordclient().equals(clientTrouve.get(0).getPasswordclient());
+        if (cl.getPasswordclient().equals(clientTrouve.get(0).getPasswordclient())) {
+            return clientTrouve.get(0);
+        } else {
+            return new Client();
+        }
+    }
+
+    public boolean findMail(Client cl) {
+        Query query = em.createNamedQuery("Client.findByMailclient");
+        query.setParameter("mailclient", cl.getMailclient());
+        List<Client> clientTrouve = query.getResultList();
+        return !clientTrouve.isEmpty();
     }
 
 }

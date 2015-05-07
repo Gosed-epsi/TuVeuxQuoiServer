@@ -83,10 +83,19 @@ public class TuVeuxQuoiService {
     /**
      *
      * @param cl : objet client avec mail et password
+     * @return client complet si trouvé | client null si non présent en base
+     */
+    public Client connection(Client cl) {
+        return clientImpl.connection(cl);
+    }
+
+    /**
+     *
+     * @param cl : objet client avec mail
      * @return true si trouvé | false si non présent en base
      */
-    public boolean connection(Client cl) {
-        return clientImpl.connection(cl);
+    public boolean verifierMail(Client cl) {
+        return clientImpl.findMail(cl);
     }
 
     /**
